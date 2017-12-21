@@ -6,15 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>ZZH&#39;s studio</title>
+  <title>Servlet学习笔记 | ZZH&#39;s studio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="ZZH&#39;s studio">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="Servlet学习笔记概述Servlet是在服务器上运行的小程序。一个Servlet就是一个Java类，并且可以通过“请求-响应”编程模型来访问这个驻留在服务器内存里的Servlet程序。">
+<meta name="keywords" content="java,笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Servlet学习笔记">
+<meta property="og:url" content="http://yoursite.com/2017/12/21/Servlet学习笔记/index.html">
 <meta property="og:site_name" content="ZZH&#39;s studio">
+<meta property="og:description" content="Servlet学习笔记概述Servlet是在服务器上运行的小程序。一个Servlet就是一个Java类，并且可以通过“请求-响应”编程模型来访问这个驻留在服务器内存里的Servlet程序。">
 <meta property="og:locale" content="zh">
+<meta property="og:image" content="http://imglf4.nosdn.127.net/img/SjNtR1h4S0dra3AxRkVzc0x5bzYrZkNkZzF4NWpkNmx3ay9HekJ6K2ttVkM3bUMzMEtZZGJBPT0.jpg?imageView&thumbnail=500x0&quality=96&stripmeta=0&type=jpg">
+<meta property="og:image" content="http://imglf3.nosdn.127.net/img/SjNtR1h4S0dra3FJV2RTQWMwZXFjejJsaXRxUjg4RXJwYTJldXVyWGlLV1BtTmkxZmxweU9BPT0.jpg?imageView&thumbnail=500x0&quality=96&stripmeta=0&type=jpg">
+<meta property="og:image" content="http://imglf5.nosdn.127.net/img/SjNtR1h4S0dra3FJV2RTQWMwZXFjNVFxNUsvd0dQd05adk5uU2R1c212TVhEZklnY3pPZHp3PT0.jpg?imageView&thumbnail=500x0&quality=96&stripmeta=0&type=jpg">
+<meta property="og:updated_time" content="2017-12-21T10:04:46.903Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ZZH&#39;s studio">
+<meta name="twitter:title" content="Servlet学习笔记">
+<meta name="twitter:description" content="Servlet学习笔记概述Servlet是在服务器上运行的小程序。一个Servlet就是一个Java类，并且可以通过“请求-响应”编程模型来访问这个驻留在服务器内存里的Servlet程序。">
+<meta name="twitter:image" content="http://imglf4.nosdn.127.net/img/SjNtR1h4S0dra3AxRkVzc0x5bzYrZkNkZzF4NWpkNmx3ay9HekJ6K2ttVkM3bUMzMEtZZGJBPT0.jpg?imageView&thumbnail=500x0&quality=96&stripmeta=0&type=jpg">
   
     <link rel="alternative" href="/atom.xml" title="ZZH&#39;s studio" type="application/atom+xml">
   
@@ -142,16 +151,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-Servlet学习笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-Servlet学习笔记" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/21/Servlet学习笔记/">Servlet学习笔记</a>
+    <h1 class="article-title" itemprop="name">
+      Servlet学习笔记
     </h1>
   
 
@@ -163,16 +170,154 @@
       </header>
     
 	<!-- 目录内容 -->
-			
+	
+		<p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+			  <span class="btn-bg"></span>
+			  <span class="btn-text">文章导航</span>
+			  </p>
+		<div id="toc-article" class="toc-article">
+			<span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+			<strong class="toc-title">文章目录</strong>
+			   <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Servlet学习笔记"><span class="toc-number">1.</span> <span class="toc-text">Servlet学习笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#概述"><span class="toc-number">1.0.1.</span> <span class="toc-text">概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tomcat容器等级"><span class="toc-number">1.0.2.</span> <span class="toc-text">Tomcat容器等级</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#编写Servlet"><span class="toc-number">1.0.3.</span> <span class="toc-text">编写Servlet</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Servlet执行流程和生命周期"><span class="toc-number">1.0.4.</span> <span class="toc-text">Servlet执行流程和生命周期</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Servlet与JSP内置对象的对应关系"><span class="toc-number">1.0.5.</span> <span class="toc-text">Servlet与JSP内置对象的对应关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Servlet路径跳转"><span class="toc-number">1.0.6.</span> <span class="toc-text">Servlet路径跳转</span></a></li></ol></li></ol></li></ol>
+			 </div>
+	   <script type="text/javascript">
+		function showToc(){
+			var toc_article = document.getElementById("toc-article");
+			var show_toc_btn = document.getElementById("show-toc-btn");
+			toc_article.setAttribute("style","display:block");
+			show_toc_btn.setAttribute("style","display:none");
+			};
+		function showBtn(){
+			var toc_article = document.getElementById("toc-article");
+			var show_toc_btn = document.getElementById("show-toc-btn");
+			toc_article.setAttribute("style","display:none");
+			show_toc_btn.setAttribute("style","display:block");
+			};
+	   </script>
+		  		
 	<!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="Servlet学习笔记"><a href="#Servlet学习笔记" class="headerlink" title="Servlet学习笔记"></a>Servlet学习笔记</h1><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>Servlet是在服务器上运行的小程序。一个Servlet就是一个Java类，并且可以通过“请求-响应”编程模型来访问这个驻留在服务器内存里的Servlet程序。</p>
-        
-          <a class="article-more-a" href="/2017/12/21/Servlet学习笔记/#more">more >></a>
-        
+<a id="more"></a>
+<h3 id="Tomcat容器等级"><a href="#Tomcat容器等级" class="headerlink" title="Tomcat容器等级"></a>Tomcat容器等级</h3><p>tomcat的容器分为四个等级，Servlet的容器管理Context容器，一个Context对应一个Web工程。</p>
+<p><img src="http://imglf4.nosdn.127.net/img/SjNtR1h4S0dra3AxRkVzc0x5bzYrZkNkZzF4NWpkNmx3ay9HekJ6K2ttVkM3bUMzMEtZZGJBPT0.jpg?imageView&amp;thumbnail=500x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="tomcat容器等级"></p>
+<h3 id="编写Servlet"><a href="#编写Servlet" class="headerlink" title="编写Servlet"></a>编写Servlet</h3><p>需要重写doGet()和doPost()方法用来处理get与post请求：</p>
+<p><strong>index.jsp：</strong></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;h1&gt;使用MyEclipse创建Servlet小例子&lt;/h1&gt;</span><br><span class="line">  &lt;hr&gt;</span><br><span class="line">  &lt;a href="servlet/HelloServlet"&gt;Get方式请求HelloServlet&lt;/a&gt;</span><br><span class="line">  &lt;form action=<span class="string">"servlet/HelloServlet"</span> method=<span class="string">"post"</span>&gt;</span><br><span class="line">    &lt;input type=<span class="string">"submit"</span> value=<span class="string">"Post方式请求HelloServlet"</span> /&gt;</span><br><span class="line">  &lt;/form&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>servlet/HelloServlet.java：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> servlet;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.PrintWriter;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletConfig;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletException;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.WebServlet;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServlet;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletResponse;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Servlet implementation class HelloServlet</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@WebServlet</span>(<span class="string">"/servlet/HelloServlet"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloServlet</span> <span class="keyword">extends</span> <span class="title">HttpServlet</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> serialVersionUID = <span class="number">1L</span>;</span><br><span class="line">       </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@see</span> HttpServlet#HttpServlet()</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">HelloServlet</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>();</span><br><span class="line">        <span class="comment">// TODO Auto-generated constructor stub</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@see</span> Servlet#init(ServletConfig)</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">(ServletConfig config)</span> <span class="keyword">throws</span> ServletException </span>&#123;</span><br><span class="line">		<span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@see</span> Servlet#destroy()</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">destroy</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@see</span> HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">		<span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line">		response.setContentType(<span class="string">"text/html;charset=utf-8"</span>);</span><br><span class="line">		System.out.println(<span class="string">"处理Get()请求"</span>);</span><br><span class="line">		PrintWriter out = response.getWriter();</span><br><span class="line">		out.print(<span class="string">"&lt;strong&gt;Hello Servlet!&lt;/strong&gt;"</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@see</span> HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">		<span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line">		response.setContentType(<span class="string">"text/html;charset=utf-8"</span>);</span><br><span class="line">		System.out.println(<span class="string">"处理Post()请求"</span>);</span><br><span class="line">		PrintWriter out = response.getWriter();</span><br><span class="line">		out.print(<span class="string">"&lt;strong&gt;Hello Servlet!&lt;/strong&gt;"</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Servlet执行流程和生命周期"><a href="#Servlet执行流程和生命周期" class="headerlink" title="Servlet执行流程和生命周期"></a>Servlet执行流程和生命周期</h3><ul>
+<li><strong>执行流程：</strong><br><img src="http://imglf3.nosdn.127.net/img/SjNtR1h4S0dra3FJV2RTQWMwZXFjejJsaXRxUjg4RXJwYTJldXVyWGlLV1BtTmkxZmxweU9BPT0.jpg?imageView&amp;thumbnail=500x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="Servlet执行流程"><ol>
+<li>Get方式请求HelloServlet。</li>
+<li>从web.xml配置文件的servlet-mapping标签中的url-pattern子标签中找到对应href标签的地址，并从servlet-name标签获得对应的servlet文件名称（HelloServlet)。</li>
+<li>再从servlet标签找到对应servlet文件所在的地址。</li>
+<li>最后从找到的类中找到doGet方法并且执行。</li>
+</ol>
+</li>
+<li><strong>生命周期：</strong></li>
+</ul>
+<p><img src="http://imglf5.nosdn.127.net/img/SjNtR1h4S0dra3FJV2RTQWMwZXFjNVFxNUsvd0dQd05adk5uU2R1c212TVhEZklnY3pPZHp3PT0.jpg?imageView&amp;thumbnail=500x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="servlet生命周期"></p>
+<ol>
+<li>初始化阶段，调用init()方法。</li>
+<li>响应客户请求阶段，调用service()方法。由service()方法根据提交方式选择执行doGet()或者doPost()方法。</li>
+<li>终止阶段，调用destroy()方法。</li>
+</ol>
+<ul>
+<li><p>Tomcat装载Servlet的三种情况：</p>
+<ol>
+<li><p>Servlet容器启动时自动装载某些Servlet，实现它只需要在web.xml文件中的servlet标签之间loadon-startup标签中添加数字，越小表示优先级别越高。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">loadon-startup</span>&gt;</span>1<span class="tag">&lt;/<span class="name">loadon-startup</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+<li><p>在Servlet容器启动后，客户首次向Servlet发送请求。</p>
+</li>
+<li><p>Servlet类文件被更新后，重新装载Servlet。</p>
+</li>
+</ol>
+<p>Servlet被装载后，Servlet容器创建一个Servlet实例并且调用Servlet的init()方法进行初始化。在Servlet的整个生命周期内，init()方法只被调用一次。</p>
+</li>
+</ul>
+<h3 id="Servlet与JSP内置对象的对应关系"><a href="#Servlet与JSP内置对象的对应关系" class="headerlink" title="Servlet与JSP内置对象的对应关系"></a>Servlet与JSP内置对象的对应关系</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">JSP对象</th>
+<th style="text-align:center">如何获得</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">out</td>
+<td style="text-align:center">response.getWriter</td>
+</tr>
+<tr>
+<td style="text-align:center">request</td>
+<td style="text-align:center">service方法中的request参数</td>
+</tr>
+<tr>
+<td style="text-align:center">response</td>
+<td style="text-align:center">service方法中的response参数</td>
+</tr>
+<tr>
+<td style="text-align:center">session</td>
+<td style="text-align:center">request.getSession()方法</td>
+</tr>
+<tr>
+<td style="text-align:center">application</td>
+<td style="text-align:center">getServletContext()方法</td>
+</tr>
+<tr>
+<td style="text-align:center">exception</td>
+<td style="text-align:center">Throwable</td>
+</tr>
+<tr>
+<td style="text-align:center">page</td>
+<td style="text-align:center">this</td>
+</tr>
+<tr>
+<td style="text-align:center">pageContext</td>
+<td style="text-align:center">PageContext</td>
+</tr>
+<tr>
+<td style="text-align:center">Config</td>
+<td style="text-align:center">getServletConfig方法</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Servlet路径跳转"><a href="#Servlet路径跳转" class="headerlink" title="Servlet路径跳转"></a>Servlet路径跳转</h3><ul>
+<li><p><strong>绝对路径：</strong>完整的路径</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--使用相对路径访问HelloServlet --&gt;</span><br><span class="line">&lt;!-- /servlet/HelloServlet 第一个/表示服务器的根目录 --&gt;</span><br><span class="line">&lt;a href="servlet/HelloServlet"&gt;访问HelloServlet!&lt;/a&gt;&lt;br&gt;</span><br></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+<li><p><strong>相对路径：</strong>相对于当前资源的路径</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 使用绝对路径 访问HelloServlet,可以使用path变量:path变量表示项目的根目录--&gt;</span><br><span class="line">&lt;a href="&lt;%=path%&gt;/servlet/HelloServlet"&gt;访问HelloServlet!&lt;/a&gt;&lt;br&gt;</span><br></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+</ul>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -196,16 +341,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/21/Servlet学习笔记/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2017/12/21/Servlet学习笔记/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2017/12/18/JSP学习笔记/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JSP学习笔记</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -220,96 +424,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-JSP学习笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/18/JSP学习笔记/">JSP学习笔记</a>
-    </h1>
-  
-
-        
-        <a href="/2017/12/18/JSP学习笔记/" class="archive-article-date">
-  	<time datetime="2017-12-18T06:36:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-18</time>
-</a>
-        
-      </header>
-    
-	<!-- 目录内容 -->
-			
-	<!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="JSP学习笔记"><a href="#JSP学习笔记" class="headerlink" title="JSP学习笔记"></a>JSP学习笔记</h1><h3 id="JSP简介"><a href="#JSP简介" class="headerlink" title="JSP简介"></a>JSP简介</h3><p>JSP全名为Java Server Pages，其根本是一个简化的Servlet设计，实现了在Java当中使用HTML标签。是一种动态网页技术标准，与Servlet一样，在服务器端执行。拥有Java平台，安全性高，适合开发大型的，企业级的Web应用程序。</p>
-        
-          <a class="article-more-a" href="/2017/12/18/JSP学习笔记/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/18/JSP学习笔记/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Servlet学习笔记"><span class="toc-number">1.</span> <span class="toc-text">Servlet学习笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#概述"><span class="toc-number">1.0.1.</span> <span class="toc-text">概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tomcat容器等级"><span class="toc-number">1.0.2.</span> <span class="toc-text">Tomcat容器等级</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#编写Servlet"><span class="toc-number">1.0.3.</span> <span class="toc-text">编写Servlet</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Servlet执行流程和生命周期"><span class="toc-number">1.0.4.</span> <span class="toc-text">Servlet执行流程和生命周期</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Servlet与JSP内置对象的对应关系"><span class="toc-number">1.0.5.</span> <span class="toc-text">Servlet与JSP内置对象的对应关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Servlet路径跳转"><span class="toc-number">1.0.6.</span> <span class="toc-text">Servlet路径跳转</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
+  
+  
+  
 
   
+
+  
+
   
 
 
@@ -332,8 +472,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

@@ -438,7 +438,7 @@
 <tr>
 <td style="text-align:center">语法格式</td>
 <td style="text-align:center">&lt;%@ include file=”..” %&gt;</td>
-<td style="text-align:center"><jsp:include page=".."></jsp:include></td>
+<td style="text-align:center">&amp;ltjsp:include page=”..” &amp;gt</td>
 </tr>
 <tr>
 <td style="text-align:center">发生作用的时间</td>
@@ -469,7 +469,7 @@
 </table>
 <h4 id="forward动作"><a href="#forward动作" class="headerlink" title="forward动作"></a>forward动作</h4><figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;jsp:forward page=<span class="string">"URL"</span> /&gt;</span><br><span class="line">&lt;!-- 等同于 --&gt;</span><br><span class="line">request.getRequestDispatcher(<span class="string">"/url"</span>).forward(request, response);</span><br></pre></td></tr></table></figure>
 <h4 id="param动作"><a href="#param动作" class="headerlink" title="param动作"></a>param动作</h4><figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;jsp:param name=<span class="string">"参数名"</span> value=<span class="string">"参数值"</span> /&gt;</span><br></pre></td></tr></table></figure>
-<p>常常与<jsp:forward> 一起使用，作为其子标签：</jsp:forward></p>
+<p>常常与&amp;ltjsp:forward&amp;gt 一起使用，作为其子标签：</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;jsp:forward page=<span class="string">"user.jsp"</span>&gt;</span><br><span class="line">    &lt;!-- 在接收从user.jsp从传递来的参数外还可以自己通过param标签添加额外的参数 --&gt;</span><br><span class="line">    &lt;jsp:param value=<span class="string">"admin@123.net"</span> name=<span class="string">"email"</span> /&gt;</span><br><span class="line">  &lt;/jsp:forward&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
 
       

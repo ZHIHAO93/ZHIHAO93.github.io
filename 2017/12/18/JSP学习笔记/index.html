@@ -21,7 +21,7 @@
 <meta property="og:image" content="http://imglf5.nosdn.127.net/img/SjNtR1h4S0dra3ErNmQ1K1JBU3JnZWh4MER1enJJQmc4Q0ZzVnkxb1hhM0RhUGJyUjVaWUlRPT0.jpg?imageView&thumbnail=500x0&quality=96&stripmeta=0&type=jpg">
 <meta property="og:image" content="http://imglf5.nosdn.127.net/img/SjNtR1h4S0dra3FORVBmb0U1YjFkSmM2VC9mRVlJRmxGcVY0cFY0SHFxKytqcHUxbXhzazVBPT0.jpg?imageView&thumbnail=500x0&quality=96&stripmeta=0&type=jpg">
 <meta property="og:image" content="http://imglf4.nosdn.127.net/img/SjNtR1h4S0dra3BBa05wYUNjZm8xc1JyT0V3b2N4QWVYNUU3OW9CSkQrdHBsK054c3BPbkV3PT0.jpg?imageView&thumbnail=500x0&quality=96&stripmeta=0&type=jpg">
-<meta property="og:updated_time" content="2017-12-20T12:29:45.373Z">
+<meta property="og:updated_time" content="2017-12-21T03:39:42.164Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JSP学习笔记">
 <meta name="twitter:description" content="JSP学习笔记JSP简介JSP全名为Java Server Pages，其根本是一个简化的Servlet设计，实现了在Java当中使用HTML标签。是一种动态网页技术标准，与Servlet一样，在服务器端执行。拥有Java平台，安全性高，适合开发大型的，企业级的Web应用程序。">
@@ -438,7 +438,7 @@
 <tr>
 <td style="text-align:center">语法格式</td>
 <td style="text-align:center">&lt;%@ include file=”..” %&gt;</td>
-<td style="text-align:center">\<jsp:include page=".."></jsp:include></td>
+<td style="text-align:center"><jsp:include page=".."></jsp:include></td>
 </tr>
 <tr>
 <td style="text-align:center">发生作用的时间</td>
@@ -469,7 +469,7 @@
 </table>
 <h4 id="forward动作"><a href="#forward动作" class="headerlink" title="forward动作"></a>forward动作</h4><figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;jsp:forward page=<span class="string">"URL"</span> /&gt;</span><br><span class="line">&lt;!-- 等同于 --&gt;</span><br><span class="line">request.getRequestDispatcher(<span class="string">"/url"</span>).forward(request, response);</span><br></pre></td></tr></table></figure>
 <h4 id="param动作"><a href="#param动作" class="headerlink" title="param动作"></a>param动作</h4><figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;jsp:param name=<span class="string">"参数名"</span> value=<span class="string">"参数值"</span> /&gt;</span><br></pre></td></tr></table></figure>
-<p>常常与\<jsp:forward> 一起使用，作为其子标签：</jsp:forward></p>
+<p>常常与<jsp:forward> 一起使用，作为其子标签：</jsp:forward></p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;jsp:forward page=<span class="string">"user.jsp"</span>&gt;</span><br><span class="line">    &lt;!-- 在接收从user.jsp从传递来的参数外还可以自己通过param标签添加额外的参数 --&gt;</span><br><span class="line">    &lt;jsp:param value=<span class="string">"admin@123.net"</span> name=<span class="string">"email"</span> /&gt;</span><br><span class="line">  &lt;/jsp:forward&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
 
       

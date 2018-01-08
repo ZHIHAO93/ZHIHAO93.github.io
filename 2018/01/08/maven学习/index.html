@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="ZZH&#39;s studio">
 <meta property="og:description" content="Maven学习笔记Maven常用构建命令：mvn 命令：  -v查看maven版本  compile编译  test测试  package打包  install安装jar包到本地仓库中  clean删除target compile">
 <meta property="og:locale" content="zh">
-<meta property="og:updated_time" content="2018-01-08T07:15:56.182Z">
+<meta property="og:updated_time" content="2018-01-08T07:19:45.248Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="maven学习">
 <meta name="twitter:description" content="Maven学习笔记Maven常用构建命令：mvn 命令：  -v查看maven版本  compile编译  test测试  package打包  install安装jar包到本地仓库中  clean删除target compile">
@@ -174,7 +174,7 @@
 		<div id="toc-article" class="toc-article">
 			<span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
 			<strong class="toc-title">文章目录</strong>
-			   <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Maven学习笔记"><span class="toc-number">1.</span> <span class="toc-text">Maven学习笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Maven常用构建命令："><span class="toc-number">1.0.1.</span> <span class="toc-text">Maven常用构建命令：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建目录的两种方式："><span class="toc-number">1.0.2.</span> <span class="toc-text">创建目录的两种方式：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Maven的生命周期"><span class="toc-number">1.0.3.</span> <span class="toc-text">Maven的生命周期</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#如何添加插件"><span class="toc-number">1.0.4.</span> <span class="toc-text">如何添加插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pom-xml文件常用元素"><span class="toc-number">1.0.5.</span> <span class="toc-text">pom.xml文件常用元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#依赖传递"><span class="toc-number">1.0.6.</span> <span class="toc-text">依赖传递</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#依赖冲突"><span class="toc-number">1.0.7.</span> <span class="toc-text">依赖冲突</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#聚合"><span class="toc-number">1.0.8.</span> <span class="toc-text">聚合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#继承"><span class="toc-number">1.0.9.</span> <span class="toc-text">继承</span></a></li></ol></li></ol></li></ol>
+			   <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Maven学习笔记"><span class="toc-number">1.</span> <span class="toc-text">Maven学习笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Maven常用构建命令："><span class="toc-number">1.0.1.</span> <span class="toc-text">Maven常用构建命令：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Maven目录结构"><span class="toc-number">1.0.2.</span> <span class="toc-text">Maven目录结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建目录的两种方式："><span class="toc-number">1.0.3.</span> <span class="toc-text">创建目录的两种方式：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Maven的生命周期"><span class="toc-number">1.0.4.</span> <span class="toc-text">Maven的生命周期</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#如何添加插件"><span class="toc-number">1.0.5.</span> <span class="toc-text">如何添加插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pom-xml文件常用元素"><span class="toc-number">1.0.6.</span> <span class="toc-text">pom.xml文件常用元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#依赖传递"><span class="toc-number">1.0.7.</span> <span class="toc-text">依赖传递</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#依赖冲突"><span class="toc-number">1.0.8.</span> <span class="toc-text">依赖冲突</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#聚合"><span class="toc-number">1.0.9.</span> <span class="toc-text">聚合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#继承"><span class="toc-number">1.0.10.</span> <span class="toc-text">继承</span></a></li></ol></li></ol></li></ol>
 			 </div>
 	   <script type="text/javascript">
 		function showToc(){
@@ -211,6 +211,7 @@
 </li>
 </ul>
 <a id="more"></a>
+<h3 id="Maven目录结构"><a href="#Maven目录结构" class="headerlink" title="Maven目录结构"></a>Maven目录结构</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">graph TB</span><br><span class="line">A[项目] --&gt; |代码|B</span><br><span class="line">B[src] --&gt; main</span><br><span class="line">main --&gt; |主代码|java</span><br><span class="line">B --&gt; |测试代码|test</span><br><span class="line">A --&gt; |配置文件|pom.xml</span><br><span class="line">A --&gt; |依赖jar包和项目|C</span><br><span class="line">C[Maven Dependencies]</span><br></pre></td></tr></table></figure>
 <h3 id="创建目录的两种方式："><a href="#创建目录的两种方式：" class="headerlink" title="创建目录的两种方式："></a>创建目录的两种方式：</h3><ol>
 <li>archetype:generate    按照提示进行选择。<ol>
 <li>archetype:generate-DgroupId=组织名，公司网址的反写+项目名 -DartifactId=项目名-模块名 -Dversion=版本号 -Dpackage=代码所存在的包名</li>
@@ -404,7 +405,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Maven学习笔记"><span class="toc-number">1.</span> <span class="toc-text">Maven学习笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Maven常用构建命令："><span class="toc-number">1.0.1.</span> <span class="toc-text">Maven常用构建命令：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建目录的两种方式："><span class="toc-number">1.0.2.</span> <span class="toc-text">创建目录的两种方式：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Maven的生命周期"><span class="toc-number">1.0.3.</span> <span class="toc-text">Maven的生命周期</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#如何添加插件"><span class="toc-number">1.0.4.</span> <span class="toc-text">如何添加插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pom-xml文件常用元素"><span class="toc-number">1.0.5.</span> <span class="toc-text">pom.xml文件常用元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#依赖传递"><span class="toc-number">1.0.6.</span> <span class="toc-text">依赖传递</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#依赖冲突"><span class="toc-number">1.0.7.</span> <span class="toc-text">依赖冲突</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#聚合"><span class="toc-number">1.0.8.</span> <span class="toc-text">聚合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#继承"><span class="toc-number">1.0.9.</span> <span class="toc-text">继承</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Maven学习笔记"><span class="toc-number">1.</span> <span class="toc-text">Maven学习笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Maven常用构建命令："><span class="toc-number">1.0.1.</span> <span class="toc-text">Maven常用构建命令：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Maven目录结构"><span class="toc-number">1.0.2.</span> <span class="toc-text">Maven目录结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建目录的两种方式："><span class="toc-number">1.0.3.</span> <span class="toc-text">创建目录的两种方式：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Maven的生命周期"><span class="toc-number">1.0.4.</span> <span class="toc-text">Maven的生命周期</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#如何添加插件"><span class="toc-number">1.0.5.</span> <span class="toc-text">如何添加插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pom-xml文件常用元素"><span class="toc-number">1.0.6.</span> <span class="toc-text">pom.xml文件常用元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#依赖传递"><span class="toc-number">1.0.7.</span> <span class="toc-text">依赖传递</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#依赖冲突"><span class="toc-number">1.0.8.</span> <span class="toc-text">依赖冲突</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#聚合"><span class="toc-number">1.0.9.</span> <span class="toc-text">聚合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#继承"><span class="toc-number">1.0.10.</span> <span class="toc-text">继承</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -535,11 +536,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">servlet</a>
+                <a href="javascript:void(0)" class="js-tag color1">maven</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">maven</a>
+                <a href="javascript:void(0)" class="js-tag color3">servlet</a>
               </li>
             
             <div class="clearfix"></div>

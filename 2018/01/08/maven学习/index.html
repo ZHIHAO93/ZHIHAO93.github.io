@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>maven学习 | ZZH&#39;s studio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Maven学习笔记Maven常用构建命令：mvn 命令：  -v查看maven版本 compile编译 test测试 package打包 install安装jar包到本地仓库中 clean删除target  ​    compile  创建目录的两种方式： archetype:generate    按照提示进行选择。 archetype:generate    -DgroupId=组织名，公司网">
+  <meta name="description" content="Maven学习笔记Maven常用构建命令：mvn 命令：  -v查看maven版本  compile编译  test测试  package打包  install安装jar包到本地仓库中  clean删除target compile">
 <meta name="keywords" content="笔记,maven">
 <meta property="og:type" content="article">
 <meta property="og:title" content="maven学习">
 <meta property="og:url" content="http://yoursite.com/2018/01/08/maven学习/index.html">
 <meta property="og:site_name" content="ZZH&#39;s studio">
-<meta property="og:description" content="Maven学习笔记Maven常用构建命令：mvn 命令：  -v查看maven版本 compile编译 test测试 package打包 install安装jar包到本地仓库中 clean删除target  ​    compile  创建目录的两种方式： archetype:generate    按照提示进行选择。 archetype:generate    -DgroupId=组织名，公司网">
+<meta property="og:description" content="Maven学习笔记Maven常用构建命令：mvn 命令：  -v查看maven版本  compile编译  test测试  package打包  install安装jar包到本地仓库中  clean删除target compile">
 <meta property="og:locale" content="zh">
-<meta property="og:updated_time" content="2018-01-08T07:14:03.841Z">
+<meta property="og:updated_time" content="2018-01-08T07:15:56.182Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="maven学习">
-<meta name="twitter:description" content="Maven学习笔记Maven常用构建命令：mvn 命令：  -v查看maven版本 compile编译 test测试 package打包 install安装jar包到本地仓库中 clean删除target  ​    compile  创建目录的两种方式： archetype:generate    按照提示进行选择。 archetype:generate    -DgroupId=组织名，公司网">
+<meta name="twitter:description" content="Maven学习笔记Maven常用构建命令：mvn 命令：  -v查看maven版本  compile编译  test测试  package打包  install安装jar包到本地仓库中  clean删除target compile">
   
     <link rel="alternative" href="/atom.xml" title="ZZH&#39;s studio" type="application/atom+xml">
   
@@ -196,17 +196,26 @@
       
         <h1 id="Maven学习笔记"><a href="#Maven学习笔记" class="headerlink" title="Maven学习笔记"></a>Maven学习笔记</h1><h3 id="Maven常用构建命令："><a href="#Maven常用构建命令：" class="headerlink" title="Maven常用构建命令："></a>Maven常用构建命令：</h3><p>mvn 命令：</p>
 <ul>
-<li>-v查看maven版本</li>
-<li>compile编译</li>
-<li>test测试</li>
-<li>package打包</li>
-<li>install安装jar包到本地仓库中</li>
-<li>clean删除target</li>
+<li><p>-v查看maven版本</p>
+</li>
+<li><p>compile编译</p>
+</li>
+<li><p>test测试</p>
+</li>
+<li><p>package打包</p>
+</li>
+<li><p>install安装jar包到本地仓库中</p>
+</li>
+<li><p>clean删除target</p>
+<p>compile </p>
+</li>
 </ul>
-<p>​    compile </p>
+<a id="more"></a>
 <h3 id="创建目录的两种方式："><a href="#创建目录的两种方式：" class="headerlink" title="创建目录的两种方式："></a>创建目录的两种方式：</h3><ol>
-<li>archetype:generate    按照提示进行选择。</li>
-<li>archetype:generate    -DgroupId=组织名，公司网址的反写+项目名 -DartifactId=项目名-模块名 -Dversion=版本号 -Dpackage=代码所存在的包名</li>
+<li>archetype:generate    按照提示进行选择。<ol>
+<li>archetype:generate-DgroupId=组织名，公司网址的反写+项目名 -DartifactId=项目名-模块名 -Dversion=版本号 -Dpackage=代码所存在的包名</li>
+</ol>
+</li>
 </ol>
 <h3 id="Maven的生命周期"><a href="#Maven的生命周期" class="headerlink" title="Maven的生命周期"></a>Maven的生命周期</h3><p><strong>完整的项目构建过程：</strong></p>
 <ul>
@@ -224,10 +233,12 @@
 </ul>
 </li>
 <li><strong>site</strong>（生成项目站点）<ul>
-<li>pre-site            在生成项目站点前要完成的工作</li>
-<li>site                生成项目的站点文档</li>
-<li>post-site            在生成项目站点后要完成的工作</li>
-<li>site-deploy    发布生成的站点到服务器上</li>
+<li>pre-site            在生成项目站点前要完成的工作<ul>
+<li>site            生成项目的站点文档</li>
+<li>post-site        在生成项目站点后要完成的工作</li>
+<li>site-deploy发布生成的站点到服务器上</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -516,19 +527,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">SSM</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">笔记</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">maven</a>
+                <a href="javascript:void(0)" class="js-tag color4">SSM</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">servlet</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">maven</a>
               </li>
             
             <div class="clearfix"></div>
